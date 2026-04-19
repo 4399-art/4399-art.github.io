@@ -1,4 +1,4 @@
-# 🚀 Python RAG 个人知识库搭建全指南
+# LangChain
 
 ##  📖 什么是 RAG？
 
