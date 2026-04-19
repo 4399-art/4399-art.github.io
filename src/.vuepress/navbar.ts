@@ -18,6 +18,8 @@ export default navbar([
       "瑞吉外卖",
       "尚医通",
       "天机学堂",
+      "LangChain",
+      "运维手册",
       "药品经验积累",
     ],
   },
