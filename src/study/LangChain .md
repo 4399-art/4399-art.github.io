@@ -1,5 +1,3 @@
-这是一份为你详细编写的 **Python RAG（检索增强生成）知识库搭建** 的Markdown笔记。你可以直接将以下内容复制并保存为 `.md` 文件（例如 `RAG_Tutorial.md`），在 Obsidian、Typora 或 VS Code 中查看。
-
 ---
 
 # 🚀 Python RAG 个人知识库搭建全指南
