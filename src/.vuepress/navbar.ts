@@ -12,7 +12,7 @@ export default navbar([
       "Docker",
       "K8S",
       "linux",
-      "nginx",
+      "负载均衡",
       "python",
       "sql",
       "瑞吉外卖",

@@ -4,7 +4,9 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
-
+  head: [
+    ["meta", { name: "referrer", content: "no-referrer" }]
+  ],
   lang: "zh-CN",
   title: "安锐的博客",
   description: "个人学习成长之旅",
