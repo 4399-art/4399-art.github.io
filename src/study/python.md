@@ -258,6 +258,182 @@ finally:
 
 ## [面向对象](https://frxcat.fun/pages/117f6e/)
 
+
+
+# Python 自动化案例笔记
+
+## 1. 读取 Excel 数据并批量插入数据库
+
+### 场景
+
+将 Excel 中的数据批量导入 MySQL / PostgreSQL。
+
+### 示例代码
+
+```python
+import pandas as pd
+import pymysql
+
+# 读取 Excel
+file_path = 'data.xlsx'
+df = pd.read_excel(file_path)
+
+# 数据库连接
+conn = pymysql.connect(host='localhost', user='root', password='123456', database='test_db')
+cursor = conn.cursor()
+
+# 批量插入
+sql = "INSERT INTO users (name, age) VALUES (%s, %s)"
+data = list(df[['name', 'age']].itertuples(index=False, name=None))
+
+cursor.executemany(sql, data)
+conn.commit()
+
+cursor.close()
+conn.close()
+```
+
+------
+
+## 2. 两个数据库数据对比并同步迁移
+
+### 场景
+
+将旧库数据同步到新库（增量同步）。
+
+### 示例代码
+
+```python
+import pymysql
+
+# 连接两个数据库
+src_conn = pymysql.connect(host='localhost', user='root', password='123456', database='old_db')
+dst_conn = pymysql.connect(host='localhost', user='root', password='123456', database='new_db')
+
+src_cursor = src_conn.cursor()
+dst_cursor = dst_conn.cursor()
+
+# 获取数据
+src_cursor.execute("SELECT id, name FROM users")
+src_data = src_cursor.fetchall()
+
+# 获取目标库已有数据
+
+dst_cursor.execute("SELECT id FROM users")
+dst_ids = set(row[0] for row in dst_cursor.fetchall())
+
+# 找出新增数据
+new_data = [row for row in src_data if row[0] not in dst_ids]
+
+# 插入新数据
+if new_data:
+    dst_cursor.executemany("INSERT INTO users (id, name) VALUES (%s, %s)", new_data)
+    dst_conn.commit()
+
+src_cursor.close()
+dst_cursor.close()
+```
+
+------
+
+## 3. 从接口获取数据并导出到 Excel
+
+### 场景
+
+调用 REST API 获取数据并保存为 Excel 文件。
+
+### 示例代码
+
+```python
+import requests
+import pandas as pd
+
+url = 'https://api.example.com/data'
+response = requests.get(url)
+data = response.json()
+
+# 转 DataFrame
+
+df = pd.DataFrame(data)
+
+# 导出 Excel
+
+df.to_excel('output.xlsx', index=False)
+```
+
+------
+
+## 4. Excel 表格中图片提取
+
+### 场景
+
+提取 Excel 中嵌入的图片。
+
+### 示例代码
+
+```python
+from openpyxl import load_workbook
+from openpyxl_image_loader import SheetImageLoader
+
+wb = load_workbook('image.xlsx')
+ws = wb.active
+
+image_loader = SheetImageLoader(ws)
+
+for row in range(1, 10):
+    cell = f'A{row}'
+    if image_loader.image_in(cell):
+        image = image_loader.get(cell)
+        image.save(f'image_{row}.png')
+```
+
+------
+
+## 5. 批量操作数据库进行业务逻辑处理
+
+### 场景
+
+对数据库数据进行批量处理，例如更新状态、计算字段等。
+
+### 示例代码
+
+```python
+import pymysql
+
+conn = pymysql.connect(host='localhost', user='root', password='123456', database='test_db')
+cursor = conn.cursor()
+
+# 查询数据
+cursor.execute("SELECT id, score FROM students")
+rows = cursor.fetchall()
+
+# 业务逻辑处理
+update_data = []
+for row in rows:
+    student_id, score = row
+    level = 'A' if score >= 90 else 'B' if score >= 75 else 'C'
+    update_data.append((level, student_id))
+
+# 批量更新
+cursor.executemany("UPDATE students SET level=%s WHERE id=%s", update_data)
+conn.commit()
+
+cursor.close()
+conn.close()
+```
+
+------
+
+## 总结
+
+常见 Python 自动化场景：
+
+- Excel 数据处理（pandas / openpyxl）
+- 数据库操作（pymysql / sqlalchemy）
+- 接口调用（requests）
+- 数据同步与迁移
+- 批量业务处理
+
 # [Fastapi](https://fastapi.org.cn/)
 
 # AI开发
