@@ -275,19 +275,21 @@ SELECT ... FROM tableA ??? JOIN tableB ON tableA.column1 = tableB.column2;
 
 我们把tableA看作左表，把tableB看成右表，那么INNER JOIN是选出两张表都存在的记录：
 
-![inner-join](https://www.liaoxuefeng.com/files/attachments/1246892164662976/l)
+
+
+![inner-join](https://gitee.com/feeling-to/img/raw/master/typora/inner-join.jpg)
 
 LEFT OUTER JOIN是选出左表存在的记录：
 
-![left-outer-join](https://www.liaoxuefeng.com/files/attachments/1246893588481376/l)
+![left-outer-join](https://gitee.com/feeling-to/img/raw/master/typora/left-outer-join.jpg)
 
 RIGHT OUTER JOIN是选出右表存在的记录：
 
-![right-outer-join](https://www.liaoxuefeng.com/files/attachments/1246893609222688/l)
+![right-outer-join](https://gitee.com/feeling-to/img/raw/master/typora/right-outer-join.jpg)
 
 FULL OUTER JOIN则是选出左右表都存在的记录：
 
-![full-outer-join](https://www.liaoxuefeng.com/files/attachments/1246893632359424/l)
+![full-outer-join](https://gitee.com/feeling-to/img/raw/master/typora/full-outer-join.jpg)
 
 ### 别名
 
