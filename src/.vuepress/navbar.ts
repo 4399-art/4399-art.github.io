@@ -21,6 +21,7 @@ export default navbar([
       "LangChain",
       "运维手册",
       "药品经验积累",
+      "ansible",
     ],
   },
   {
