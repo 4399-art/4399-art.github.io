@@ -1,9 +1,9 @@
 
-# 📘 Ansible 实践案例
+# Ansible 
 
 [**更换 CentOS YUM 源**](https://www.cnblogs.com/mq0036/p/18610547)
 
-![image-20250816205616678](./assets/ansible_study/image-20250816205616678.png)
+![image-20250816205616678](https://gitee.com/feeling-to/img/raw/master/typora/image-20250816205616678.png)
 
 ## 🧱 环境说明
 
