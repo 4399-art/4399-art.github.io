@@ -74,7 +74,7 @@ systemctl status firewalld
 
 ## 二. 镜像
 
-​ **分层存储**
+ **分层存储**
 
 ### 安装镜像
 
@@ -92,10 +92,10 @@ systemctl status firewalld
   FROM 镜像名
   一 shell 格式：RUN <命令>，就像直接在命令行中输入的命令一样
   二 exec 格式：RUN ["可执行文件", "参数1", "参数2"]，这更像是函数调用中的格式。
-
+  
   构建镜像
   docker build [选项] <上下文路径/URL/->
-
+  
   ```
 
   ```
@@ -219,6 +219,67 @@ curl 127.0.0.1:8080
 
 ```
  docker network create -d bridge my-net         //-d 参数指定 Docker 网络类型
+```
+
+## 国内镜像源
+
+### 方法一：配置 Docker Daemon（永久生效）
+
+这是最推荐的方式，通过修改守护进程配置文件来指定镜像源，所有 Docker 命令都会默认使用该源。
+
+#### 1. 编辑配置文件
+
+Docker Daemon 的配置文件通常位于 `/etc/docker/daemon.json`。如果文件不存在，直接创建即可。
+
+bash
+
+```
+sudo mkdir -p /etc/docker
+sudo vim /etc/docker/daemon.json
+```
+
+
+
+#### 2. 添加镜像源地址
+
+在 `daemon.json` 中加入 `registry-mirrors` 配置项。该参数接受一个字符串数组，可配置多个镜像源作为备用。
+
+json
+
+```
+{
+  "registry-mirrors": [
+    "https://mirror.example1.com",
+    "https://mirror.example2.com"
+  ]
+}
+```
+
+
+
+> **注意**：配置文件必须为有效的 JSON 格式，最后一个条目末尾不能有逗号。
+
+#### 3. 重启 Docker 服务
+
+配置修改后，需要重启 Docker 守护进程使其生效。
+
+bash
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+
+
+#### 4. 验证配置
+
+使用 `docker info` 命令检查，输出中若出现你配置的镜像地址，即表示配置成功。
+
+bash
+
+```
+docker info | grep -A 5 "Registry Mirrors"
 ```
 
 # nginx
