@@ -1,4 +1,4 @@
-# RAG
+# LangChain-RAG
 
 ##  📖 什么是 RAG？
 
