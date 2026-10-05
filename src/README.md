@@ -19,7 +19,7 @@ actions:
 
   - text: 💻 项目实践
     icon: laptop-code
-    link: /demo/
+    link: http://106.55.16.79
 
 highlights:
   - header: 👨‍💻 关于我
