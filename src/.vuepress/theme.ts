@@ -12,7 +12,9 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "4399-art/4399-art.github.io",
+
+  repoDisplay: false,
 
   docsDir: "src",
 

@@ -30,4 +30,9 @@ export default navbar([
     icon: "book",
     link: "https://www.yuque.com/jinghongyipie-ssx81/xka0ci",
   },
+  {
+    text: "GitHub",
+    icon: "github",
+    link: "https://github.com/4399-art?tab=repositories",
+  },
 ]);
