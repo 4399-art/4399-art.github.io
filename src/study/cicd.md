@@ -2,7 +2,7 @@
 
 
 
-# CI/CD 流水线实战笔记
+# CI/CD 
 
 > 技术栈：**Git + Jenkins + Docker**
 > 目标：实现 CI/CD（持续集成/持续部署）的流行技术栈。其核心流程是：开发者推送代码至 Git（GitHub/GitLab），触发 Jenkins 自动从 Git 拉取代码，通过 Docker 构建镜像并推送到镜像仓库，最后由 Jenkins 远程或在本地部署新镜像，实现了代码提交部署的一键化管理
