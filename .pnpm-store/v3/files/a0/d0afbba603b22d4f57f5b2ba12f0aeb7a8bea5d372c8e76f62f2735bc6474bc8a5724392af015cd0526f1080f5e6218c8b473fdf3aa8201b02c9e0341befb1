@@ -1,0 +1,3 @@
+import './config.css';
+import{o as e,t}from"../usePhotoSwipe-BxA1mMYg.js";import{defineClientConfig as n}from"vuepress/client";const r=__PS_SELECTOR__,i=__PS_LOCALES__,a=__PS_DOWNLOAD__,o=__PS_FULLSCREEN__,s=__PS_SCROLL_TO_CLOSE__;var c=n({enhance:({app:t})=>{e(t)},setup:()=>{t({selector:r,locales:i,download:a,fullscreen:o,scrollToClose:s})}});export{c as default};
+//# sourceMappingURL=config.js.map

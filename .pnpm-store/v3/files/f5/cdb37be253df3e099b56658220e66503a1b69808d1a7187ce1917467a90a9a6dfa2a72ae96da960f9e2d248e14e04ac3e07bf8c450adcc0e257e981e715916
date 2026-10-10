@@ -1,0 +1,2 @@
+import{inlineRule as e}from"@mdit/plugin-inline-rule";const t=[[`class`,`spoiler`],[`tabindex`,`-1`]],n=(n,r)=>{let{tag:i=`span`,attrs:a=t}=r??{};e(n,{marker:`!`,tag:i,token:`spoiler`,nested:!0,placement:`before-emphasis`,attrs:a})};export{n as spoiler};
+//# sourceMappingURL=index.js.map

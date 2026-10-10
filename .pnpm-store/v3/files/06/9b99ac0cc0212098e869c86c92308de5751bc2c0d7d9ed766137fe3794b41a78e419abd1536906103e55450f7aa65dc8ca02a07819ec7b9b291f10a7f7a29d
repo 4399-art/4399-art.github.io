@@ -1,0 +1,2 @@
+import{isFunction as e}from"@vuepress/helper/client";import{watchImmediate as t}from"@vueuse/core";import{computed as n,inject as r,isRef as i,readonly as a,ref as o}from"vue";const s=__COMMENT_OPTIONS__,c=o(s),l=Symbol(__VUEPRESS_DEV__?`comment`:``),u=r=>{i(r)?t(r,e=>{c.value={...s,...e}}):e(r)?t(n(r),e=>{c.value={...s,...e}}):c.value={...s,...r}},d=()=>r(l),f=u,p=d,m=u,h=d,g=u,_=d,v=u,y=d,b=e=>{e.provide(l,a(c))};export{b as a,h as c,v as i,_ as l,m as n,p as o,g as r,d as s,f as t,y as u};
+//# sourceMappingURL=comment-CtFPeK8Z.js.map

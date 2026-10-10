@@ -1,0 +1,2 @@
+import{t as e}from"../setupCopyright-DBX7l8js.js";import{defineClientConfig as t}from"vuepress/client";var n=t({setup:()=>{e(__COPYRIGHT_OPTIONS__,__COPYRIGHT_LOCALES__)}});export{n as default};
+//# sourceMappingURL=config.js.map

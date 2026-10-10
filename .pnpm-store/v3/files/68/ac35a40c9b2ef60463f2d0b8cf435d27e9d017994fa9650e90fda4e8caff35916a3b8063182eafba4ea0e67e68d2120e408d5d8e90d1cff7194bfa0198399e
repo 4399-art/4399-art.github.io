@@ -1,0 +1,67 @@
+{
+  "name": "@vuepress/plugin-shiki",
+  "version": "2.0.0-rc.128",
+  "description": "VuePress plugin - shiki",
+  "keywords": [
+    "highlight",
+    "plugin",
+    "shiki",
+    "vuepress",
+    "vuepress-plugin"
+  ],
+  "homepage": "https://ecosystem.vuejs.press/plugins/markdown/shiki.html",
+  "bugs": {
+    "url": "https://github.com/vuepress/ecosystem/issues"
+  },
+  "license": "MIT",
+  "author": "meteorlxy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuepress/ecosystem.git",
+    "directory": "plugins/markdown/plugin-shiki"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "./dist/**/*.css"
+  ],
+  "main": "./dist/node/index.js",
+  "types": "./dist/node/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/node/index.d.ts",
+      "default": "./dist/node/index.js"
+    },
+    "./resolveLang": "./dist/node/resolveLang.js",
+    "./shiki.css": "./dist/client/styles/shiki.css",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@shikijs/transformers": "^4.0.2",
+    "@vuepress/helper": "2.0.0-rc.128",
+    "@vuepress/highlighter-helper": "2.0.0-rc.128",
+    "nanoid": "^5.1.7",
+    "shiki": "^4.0.2",
+    "synckit": "^0.11.12"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@vuepress/shiki-twoslash": "2.0.0-rc.128",
+    "markdown-it": "^14.1.1"
+  },
+  "peerDependencies": {
+    "@vuepress/shiki-twoslash": "2.0.0-rc.128",
+    "vuepress": "2.0.0-rc.28"
+  },
+  "peerDependenciesMeta": {
+    "@vuepress/shiki-twoslash": {
+      "optional": true
+    }
+  },
+  "gitHead": "47b25c2008dc496e4638cae7528374846d3660dd"
+}

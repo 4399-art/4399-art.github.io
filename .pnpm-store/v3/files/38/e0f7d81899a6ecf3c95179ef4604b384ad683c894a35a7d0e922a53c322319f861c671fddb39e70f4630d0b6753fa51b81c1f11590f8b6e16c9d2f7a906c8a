@@ -1,0 +1,9 @@
+import{footnote as e}from"@mdit/plugin-footnote";import{tasklist as t}from"@mdit/plugin-tasklist";import{Logger as n,deepAssign as r,ensureEndingSlash as i}from"@vuepress/helper";import a from"markdown-it-cjk-friendly";import{isPlainObject as o}from"vuepress/shared";import{load as s}from"js-yaml";import{getDirname as c,path as l}from"vuepress/utils";import{container as u}from"@mdit/plugin-container";const d=import.meta.dirname||c(import.meta.url),f=`@vuepress/plugin-markdown-ext`,p=new n(f),m=i(l.resolve(d,`../client`)),h=e=>JSON.stringify(e).replaceAll(`'`,`&#39`),g=e=>(t,n,r,{filePathRelative:i})=>{let{content:a}=t[n],o=null;if(a.trim().startsWith(`{`))try{o=JSON.parse(a)}catch{}else try{o=s(a)}catch{}return o?`<${e} v-bind='${h(o)}' />`:(p.error(`Invalid ${e} config${i?` found in ${i}`:``}:
+${a}
+`),``)},_=e=>{let{fence:t}=e.renderer.rules;e.renderer.rules.fence=(...e)=>{let[n,r]=e,{info:i}=n[r],[a,o]=i.split(` `,2);return a===`component`?g(o)(...e):t(...e)}},v=e=>{u(e,{name:`v-pre`,openRender:()=>`<div v-pre>
+`,closeRender:()=>`</div>
+`})},y=(e,{gfm:t,footnote:n,tasklist:r})=>e.writeTemp(`markdown-ext/config.js`,`\
+    ${n??t?`import "${m}styles/footnote.css"\n`:``}\
+    ${r??t?`import "${m}styles/tasklist.css"\n`:``}\
+`),b=/^(zh|ja|ko)\b/i,x=n=>i=>{let s=r({},i.options.markdown.ext,n),{gfm:c,breaks:l,linkify:u,footnote:d,tasklist:p,component:m,vPre:h,cjkFriendly:g}=s;i.options.markdown.ext=s;let x=g??[i.options.lang,...Object.values(i.options.locales).map(e=>e.lang)].some(e=>e&&b.test(e));return{name:f,extendsMarkdown:n=>{(l??c)&&(n.options.breaks=!0),(u??c)&&(n.options.linkify=!0),(d??c)&&n.use(e),(p??c)&&n.use(t,[o(p)?p:{}]),m&&n.use(_),h&&n.use(v),x&&n.use(a)},clientConfigFile:()=>y(i,{gfm:c,footnote:d,tasklist:p})}};export{_ as component,x as markdownExtPlugin,v as vPre};
+//# sourceMappingURL=index.js.map

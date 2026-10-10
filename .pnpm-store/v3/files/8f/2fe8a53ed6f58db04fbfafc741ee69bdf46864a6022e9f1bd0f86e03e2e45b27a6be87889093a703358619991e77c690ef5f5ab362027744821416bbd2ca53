@@ -1,0 +1,1 @@
+import{t as e}from"../useRtl-ClG6Yc5u.js";export{e as useRtl};

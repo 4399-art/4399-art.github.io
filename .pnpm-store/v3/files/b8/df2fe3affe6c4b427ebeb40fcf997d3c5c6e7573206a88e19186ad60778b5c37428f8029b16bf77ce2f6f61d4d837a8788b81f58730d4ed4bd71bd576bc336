@@ -1,0 +1,2 @@
+import{t as e}from"../useRtl-ClG6Yc5u.js";import{defineClientConfig as t}from"vuepress/client";var n=t({setup(){e(__RTL_LOCALES__,__RTL_SELECTOR__)}});export{n as default};
+//# sourceMappingURL=config.js.map

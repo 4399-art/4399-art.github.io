@@ -1,0 +1,2 @@
+import{isString as e}from"@vuepress/helper/client";import{inject as t}from"vue";let n=t=>e(t.title)?{title:t.title}:null;const r=Symbol(__VUEPRESS_DEV__?`catalog-info-getter`:``),i=e=>{n=e},a=()=>t(r),o=e=>{e.provide(r,n)};export{o as n,a as r,i as t};
+//# sourceMappingURL=useCatalogInfoGetter-BSIWoZfb.js.map

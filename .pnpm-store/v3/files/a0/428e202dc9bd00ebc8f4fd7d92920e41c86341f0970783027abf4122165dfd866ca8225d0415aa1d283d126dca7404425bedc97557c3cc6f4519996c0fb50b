@@ -1,0 +1,2 @@
+import{useLocalStorage as e,usePreferredLanguages as t,useSessionStorage as n}from"@vueuse/core";import{computed as r}from"vue";import{entries as i}from"@vuepress/helper/client";import{useRouteLocale as a}from"vuepress/client";const o=`VUEPRESS_REDIRECT_STATUS`,s=e(o,{}),c=n(o,{}),l=e=>{let n=t(),o=a(),s=i(e.config);return r(()=>{if(s.some(([e])=>o.value===e)){for(let e of n.value)for(let[t,n]of s)if(n.includes(e))return t===o.value?null:{lang:e,localePath:t}}return null})};export{s as n,c as r,l as t};
+//# sourceMappingURL=useRedirectLocation-BSY1eFYw.js.map

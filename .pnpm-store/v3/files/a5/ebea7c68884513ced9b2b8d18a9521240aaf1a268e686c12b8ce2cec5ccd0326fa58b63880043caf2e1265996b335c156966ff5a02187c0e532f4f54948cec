@@ -1,0 +1,27 @@
+import { entries } from "@vuepress/helper/client";
+import { defineComponent, h } from "vue";
+import { generateIndexFromHash } from "vuepress-shared/client";
+import { RouteLink, useFrontmatter } from "vuepress/client";
+import { useTagMap } from "@theme-hope/composables/blog/useTagMap";
+import cssVariables from "../../styles/variables.module.scss";
+import "../../styles/blog/tag-list.scss";
+export default defineComponent({
+    name: "TagList",
+    setup() {
+        const frontmatter = useFrontmatter();
+        const tagMap = useTagMap();
+        const isActive = (name) => name === frontmatter.value.blog?.name;
+        return () => h("ul", { class: "vp-tag-list" }, entries(tagMap.value.map)
+            // Sort from more to less
+            .sort(([, a], [, b]) => b.items.length - a.items.length)
+            .map(([tag, { path, items }]) => h("li", { class: "vp-tag-item" }, h(RouteLink, {
+            class: [
+                "vp-tag",
+                `color${generateIndexFromHash(tag, Number(cssVariables.colorNumber))}`,
+                { active: isActive(tag) },
+            ],
+            to: path,
+        }, () => [tag, h("span", { class: "vp-tag-count" }, items.length)]))));
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGFnTGlzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jbGllbnQvY29tcG9uZW50cy9ibG9nL1RhZ0xpc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLE9BQU8sRUFBRSxNQUFNLHlCQUF5QixDQUFDO0FBR2xELE9BQU8sRUFBRSxlQUFlLEVBQUUsQ0FBQyxFQUFFLE1BQU0sS0FBSyxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxxQkFBcUIsRUFBRSxNQUFNLHdCQUF3QixDQUFDO0FBQy9ELE9BQU8sRUFBRSxTQUFTLEVBQUUsY0FBYyxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFFNUQsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLHdDQUF3QyxDQUFDO0FBRW5FLE9BQU8sWUFBWSxNQUFNLG9DQUFvQyxDQUFDO0FBQzlELE9BQU8saUNBQWlDLENBQUM7QUFFekMsZUFBZSxlQUFlLENBQUM7SUFDN0IsSUFBSSxFQUFFLFNBQVM7SUFFZixLQUFLO1FBQ0gsTUFBTSxXQUFXLEdBQUcsY0FBYyxFQUFpQyxDQUFDO1FBQ3BFLE1BQU0sTUFBTSxHQUFHLFNBQVMsRUFBRSxDQUFDO1FBRTNCLE1BQU0sUUFBUSxHQUFHLENBQUMsSUFBWSxFQUFXLEVBQUUsQ0FBQyxJQUFJLEtBQUssV0FBVyxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsSUFBSSxDQUFDO1FBRWxGLE9BQU8sR0FBVSxFQUFFLENBQ2pCLENBQUMsQ0FDQyxJQUFJLEVBQ0osRUFBRSxLQUFLLEVBQUUsYUFBYSxFQUFFLEVBQ3hCLE9BQU8sQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQztZQUN2Qix5QkFBeUI7YUFDeEIsSUFBSSxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxNQUFNLEdBQUcsQ0FBQyxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUM7YUFDdkQsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLEVBQUUsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLENBQUMsRUFBRSxFQUFFLENBQzlCLENBQUMsQ0FDQyxJQUFJLEVBQ0osRUFBRSxLQUFLLEVBQUUsYUFBYSxFQUFFLEVBQ3hCLENBQUMsQ0FDQyxTQUFTLEVBQ1Q7WUFDRSxLQUFLLEVBQUU7Z0JBQ0wsUUFBUTtnQkFDUixRQUFRLHFCQUFxQixDQUFDLEdBQUcsRUFBRSxNQUFNLENBQUMsWUFBWSxDQUFDLFdBQVcsQ0FBQyxDQUFDLEVBQUU7Z0JBQ3RFLEVBQUUsTUFBTSxFQUFFLFFBQVEsQ0FBQyxHQUFHLENBQUMsRUFBRTthQUMxQjtZQUNELEVBQUUsRUFBRSxJQUFJO1NBQ1QsRUFDRCxHQUFHLEVBQUUsQ0FBQyxDQUFDLEdBQUcsRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLEVBQUUsS0FBSyxFQUFFLGNBQWMsRUFBRSxFQUFFLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUNoRSxDQUNGLENBQ0YsQ0FDSixDQUFDO0lBQ04sQ0FBQztDQUNGLENBQUMsQ0FBQyJ9

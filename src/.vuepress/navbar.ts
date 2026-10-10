@@ -25,6 +25,16 @@ export default navbar([
       "ansible",
     ],
   },
+    {
+    text: "AI编程",
+    icon: "lightbulb",
+    prefix: "/VibeCoding/",
+    children: [
+      "SmartReservation",
+      "Fund",
+      "jobhunter",
+    ],
+  },
   {
     text: "语雀",
     icon: "book",

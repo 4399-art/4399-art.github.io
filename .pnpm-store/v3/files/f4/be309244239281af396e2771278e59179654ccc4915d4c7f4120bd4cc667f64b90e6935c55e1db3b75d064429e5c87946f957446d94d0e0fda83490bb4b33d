@@ -1,0 +1,7 @@
+import { isActiveLink } from "vuepress-shared/client";
+import { isActiveItem } from "@theme-hope/utils/isActiveItem";
+export const isActiveSidebarItem = (route, item) => "children" in item
+    ? (Boolean(item.prefix) && isActiveLink(route, item.prefix)) ||
+        item.children.some((child) => isActiveSidebarItem(route, child))
+    : isActiveItem(route, item);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXNBY3RpdmVTaWRlYmFySXRlbS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jbGllbnQvdXRpbHMvc2lkZWJhci9pc0FjdGl2ZVNpZGViYXJJdGVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSx3QkFBd0IsQ0FBQztBQUl0RCxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0sZ0NBQWdDLENBQUM7QUFFOUQsTUFBTSxDQUFDLE1BQU0sbUJBQW1CLEdBQUcsQ0FDakMsS0FBb0MsRUFDcEMsSUFBaUIsRUFDUixFQUFFLENBQ1gsVUFBVSxJQUFJLElBQUk7SUFDaEIsQ0FBQyxDQUFDLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxZQUFZLENBQUMsS0FBSyxFQUFFLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUMxRCxJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDLEtBQUssRUFBRSxFQUFFLENBQUMsbUJBQW1CLENBQUMsS0FBSyxFQUFFLEtBQUssQ0FBQyxDQUFDO0lBQ2xFLENBQUMsQ0FBQyxZQUFZLENBQUMsS0FBSyxFQUFFLElBQUksQ0FBQyxDQUFDIn0=

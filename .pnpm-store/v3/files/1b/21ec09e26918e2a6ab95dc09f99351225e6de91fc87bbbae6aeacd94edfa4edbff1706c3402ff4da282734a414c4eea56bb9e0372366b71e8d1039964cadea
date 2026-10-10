@@ -1,0 +1,7 @@
+import { computed } from "vue";
+import { useThemeLocale } from "@theme-hope/composables/useTheme";
+export const useAppearanceLocale = () => {
+    const themeLocale = useThemeLocale();
+    return computed(() => themeLocale.value.outlookLocales);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlQXBwZWFyYW5jZUxvY2FsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jbGllbnQvY29tcG9zYWJsZXMvYXBwZWFyYW5jZS91c2VBcHBlYXJhbmNlTG9jYWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxLQUFLLENBQUM7QUFFL0IsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLGtDQUFrQyxDQUFDO0FBSWxFLE1BQU0sQ0FBQyxNQUFNLG1CQUFtQixHQUFHLEdBQW1DLEVBQUU7SUFDdEUsTUFBTSxXQUFXLEdBQUcsY0FBYyxFQUFFLENBQUM7SUFFckMsT0FBTyxRQUFRLENBQUMsR0FBRyxFQUFFLENBQUMsV0FBVyxDQUFDLEtBQUssQ0FBQyxjQUFjLENBQUMsQ0FBQztBQUMxRCxDQUFDLENBQUMifQ==

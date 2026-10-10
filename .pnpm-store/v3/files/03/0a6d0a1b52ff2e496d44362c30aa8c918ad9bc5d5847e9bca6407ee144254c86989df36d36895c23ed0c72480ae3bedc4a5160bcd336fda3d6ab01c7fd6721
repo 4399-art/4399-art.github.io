@@ -1,0 +1,3 @@
+export { default as GlobalEncrypt } from "@theme-hope/components/encrypt/GlobalEncrypt";
+export { default as LocalEncrypt } from "@theme-hope/components/encrypt/LocalEncrypt";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW5jcnlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jbGllbnQvZXhwb3J0cy9lbmNyeXB0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxPQUFPLElBQUksYUFBYSxFQUFFLE1BQU0sOENBQThDLENBQUM7QUFDeEYsT0FBTyxFQUFFLE9BQU8sSUFBSSxZQUFZLEVBQUUsTUFBTSw2Q0FBNkMsQ0FBQyJ9

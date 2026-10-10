@@ -1,0 +1,3 @@
+import './config.css';
+import{a as e,s as t}from"../comment-CtFPeK8Z.js";import{computed as n,defineComponent as r,h as i}from"vue";import{defineClientConfig as a,useData as o}from"vuepress/client";import s from"@vuepress/plugin-comment/service";var c=r({name:`CommentService`,props:{identifier:String,darkmode:Boolean},setup(e){let{frontmatter:r,page:a}=o(),c=t(),l=n(()=>r.value.comment??c.value.comment??!0);return()=>i(s,{class:`vp-comment`,"vp-comment":``,identifier:e.identifier??r.value.commentID??a.value.path,darkmode:e.darkmode,style:{display:l.value?`block`:`none`}})}}),l=a({enhance:({app:t})=>{e(t),t.component(`CommentService`,c)}});export{l as default};
+//# sourceMappingURL=config.js.map

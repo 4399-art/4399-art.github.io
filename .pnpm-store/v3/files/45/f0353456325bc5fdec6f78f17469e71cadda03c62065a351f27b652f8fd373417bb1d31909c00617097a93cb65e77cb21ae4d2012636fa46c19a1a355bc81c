@@ -1,0 +1,1 @@
+{"version":3,"file":"noop.js","names":[],"sources":["../../../src/client/exports/noop.ts"],"sourcesContent":["declare const __VP_CUSTOM__: boolean;\n\nif (__VP_CUSTOM__) {\n  throw new Error(`\\\nVuePress Theme is running in bundle mode, this import is not allowed.\n`);\n}\n\nexport {};\n"],"mappings":";AAEA,IAAI,cACF,OAAM,IAAI,MAAM;;EAEhB"}

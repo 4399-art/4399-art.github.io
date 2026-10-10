@@ -1,0 +1,2 @@
+import{o as e}from"../../comment-CtFPeK8Z.js";import t from"artalk/dist/Artalk.mjs";const n=!0,r=()=>{let n=e();return({selector:e})=>{t.loadCountWidget({server:n.value.server,site:n.value.site,...e?{countEl:e}:{}})}};export{n as isSupported,r as usePageview};
+//# sourceMappingURL=artalk.js.map

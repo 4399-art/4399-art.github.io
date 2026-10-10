@@ -1,0 +1,3 @@
+import './config.css';
+import{n as e,t}from"../setupRedirect-DQRJJNlS.js";import{h as n}from"vue";import{defineClientConfig as r}from"vuepress/client";import i from"@vuepress/plugin-redirect/component";const a=__REDIRECT_CONFIG__;var o=r({setup(){__REDIRECT_DIRECT__&&t(a),__VUEPRESS_DEV__&&e(a)},...__REDIRECT_COMPONENT__?{rootComponents:[()=>n(i,{config:a,locales:__REDIRECT_LOCALES__})]}:{}});export{a as config,o as default};
+//# sourceMappingURL=config.js.map

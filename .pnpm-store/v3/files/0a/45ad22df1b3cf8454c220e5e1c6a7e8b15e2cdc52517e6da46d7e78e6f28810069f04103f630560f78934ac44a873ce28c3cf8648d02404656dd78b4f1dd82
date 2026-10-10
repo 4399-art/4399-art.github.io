@@ -1,0 +1,29 @@
+.flowchart-loading {
+  color: var(--vp-c-accent-bg);
+}
+
+.flowchart-wrapper {
+  text-align: center;
+  direction: ltr;
+  padding: .6em .4em;
+  transition: all 1s;
+  overflow-x: auto;
+}
+
+@media print {
+  .flowchart-wrapper {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 719px) {
+  .flowchart-wrapper {
+    margin: 0 -1.5rem;
+    padding: .6em 0;
+  }
+}
+
+.flowchart-wrapper.vue .start-element, .flowchart-wrapper.vue .end-element, .flowchart-wrapper.vue .operation-element, .flowchart-wrapper.vue .parallel-element {
+  rx: 5px;
+  ry: 5px;
+}

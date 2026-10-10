@@ -1,0 +1,31 @@
+.photo-swipe-loading {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.photo-swipe-bullets-indicator {
+  flex-flow: row;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.photo-swipe-bullet {
+  background: var(--photo-swipe-c-bullet);
+  border-radius: 3px;
+  width: 12px;
+  height: 6px;
+  margin: 0 5px;
+  transition: width .3s, color .3s;
+}
+
+.photo-swipe-bullet.active {
+  background: var(--photo-swipe-c-bullet-active);
+  width: 30px;
+}
