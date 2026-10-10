@@ -1,2 +1,0 @@
-import{getDirname as e,path as t}from"vuepress/utils";const n=import.meta.dirname||e(import.meta.url),r=(e={})=>({name:`@vuepress/plugin-rtl`,define:{__RTL_LOCALES__:Array.isArray(e.locales)?e.locales:[`/`],__RTL_SELECTOR__:e.selector??{html:{dir:`rtl`}}},clientConfigFile:t.join(n,`../client/config.js`)});export{r as rtlPlugin};
-//# sourceMappingURL=index.js.map

@@ -1,1 +1,0 @@
-import{t as e}from"../setupCopyright-DBX7l8js.js";export{e as setupCopyright};

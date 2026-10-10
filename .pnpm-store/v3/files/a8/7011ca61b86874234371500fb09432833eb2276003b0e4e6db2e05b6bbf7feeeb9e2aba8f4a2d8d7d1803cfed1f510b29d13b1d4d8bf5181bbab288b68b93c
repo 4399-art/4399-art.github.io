@@ -1,4 +1,0 @@
-import { useThemeData as _useThemeData, useThemeLocaleData as _useThemeLocaleData, } from "@vuepress/plugin-theme-data/client";
-export const useTheme = () => _useThemeData();
-export const useThemeLocale = () => _useThemeLocaleData();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlVGhlbWUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvY2xpZW50L2NvbXBvc2FibGVzL3VzZVRoZW1lLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sRUFDTCxZQUFZLElBQUksYUFBYSxFQUM3QixrQkFBa0IsSUFBSSxtQkFBbUIsR0FDMUMsTUFBTSxvQ0FBb0MsQ0FBQztBQUk1QyxNQUFNLENBQUMsTUFBTSxRQUFRLEdBQUcsR0FBNEIsRUFBRSxDQUFDLGFBQWEsRUFBYSxDQUFDO0FBRWxGLE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRyxHQUEwQyxFQUFFLENBQ3hFLG1CQUFtQixFQUFxQixDQUFDIn0=

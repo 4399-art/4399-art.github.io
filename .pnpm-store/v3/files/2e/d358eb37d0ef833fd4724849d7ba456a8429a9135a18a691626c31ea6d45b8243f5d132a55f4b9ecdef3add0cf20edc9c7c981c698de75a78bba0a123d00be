@@ -1,1 +1,0 @@
-import{n as e,r as t,t as n}from"../Notice-K8OS9iuw.js";export{n as Notice,e as noticeOptions,t as useNoticeOptions};

@@ -1,2 +1,0 @@
-import{u as e}from"../../comment-CtFPeK8Z.js";import{pageviewCount as t}from"@waline/client/pageview";const n=!0,r=()=>{let n=e();return e=>t({serverURL:n.value.serverURL,...e})};export{n as isSupported,r as usePageview};
-//# sourceMappingURL=waline.js.map

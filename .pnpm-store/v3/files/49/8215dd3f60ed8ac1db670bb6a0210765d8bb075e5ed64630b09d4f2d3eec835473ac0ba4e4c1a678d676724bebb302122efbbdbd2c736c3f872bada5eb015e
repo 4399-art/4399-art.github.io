@@ -1,1 +1,0 @@
-import{n as e,r as t,t as n}from"../useCatalogInfoGetter-BSIWoZfb.js";export{n as defineCatalogInfoGetter,e as injectCatalogInfoGetter,t as useCatalogInfoGetter};

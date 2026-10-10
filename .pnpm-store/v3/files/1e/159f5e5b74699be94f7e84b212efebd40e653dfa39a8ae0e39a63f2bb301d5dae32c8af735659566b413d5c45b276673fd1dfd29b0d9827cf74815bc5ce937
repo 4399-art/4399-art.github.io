@@ -1,2 +1,0 @@
-import{container as e}from"@mdit/plugin-container";const t=t=>{[`left`,`center`,`right`,`justify`].forEach(n=>t.use(()=>{e(t,{name:n,openRender:()=>`<div style="text-align:${n}">\n`})}))};export{t as align};
-//# sourceMappingURL=index.js.map
