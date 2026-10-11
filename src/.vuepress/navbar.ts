@@ -29,7 +29,7 @@ export default navbar([
   },
     {
     text: "AI编程",
-    icon: "lightbulb",
+    icon: "wand-sparkles",
     prefix: "/VibeCoding/",
     children: [
       "SmartReservation",

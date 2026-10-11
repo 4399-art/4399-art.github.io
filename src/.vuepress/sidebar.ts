@@ -11,6 +11,12 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "AI编程",
+      icon: "code",
+      prefix: "VibeCoding/",
+      children: "structure",
+    },
+    {
       text: "语雀",
       icon: "person-chalkboard",
       link: "https://www.yuque.com/jinghongyipie-ssx81/xka0ci",
