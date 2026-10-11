@@ -23,6 +23,8 @@ export default navbar([
       "运维手册",
       "药品经验积累",
       "ansible",
+      "ELK",
+      "监控告警",
     ],
   },
     {
